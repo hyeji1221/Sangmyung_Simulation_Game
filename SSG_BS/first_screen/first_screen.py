@@ -11,6 +11,7 @@ sys.path.append("C:/Users/USER/OneDrive/바탕 화면/sangmyung_simulation_game-
 
 
 form_class=uic.loadUiType("first_screen.ui")[0]
+form_class=uic.loadUiType("init_screen.ui")[0]
 
 class WindowClass(QMainWindow, form_class):
 
