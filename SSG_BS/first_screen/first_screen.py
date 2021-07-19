@@ -3,33 +3,46 @@ import sys
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from PyQt5.uic import loadUi
+from PyQt5 import QtWidgets
+
 import os
 
-sys.path.append("C:/Users/USER/OneDrive/바탕 화면/sangmyung_simulation_game-main/sangmyung_simulation_game-main/SSG_BS")
-#from . import basic_screen
-
-
+sys.path.append("C:/Users/USER/PycharmProjects/sangmyung_simulation_game/SSG_BS/basic_screen")
+#from * import basic_screen
 
 form_class=uic.loadUiType("first_screen.ui")[0]
-form_class=uic.loadUiType("init_screen.ui")[0]
+form_class1=uic.loadUiType("init_screen.ui")[0]
 
-class WindowClass(QMainWindow, form_class):
+class WindowClass(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        loadUi("first_screen.ui", self)
         self.init.clicked.connect(self.initButton)
         self.continue_2.clicked.connect(self.continueButton)
         self.exit.clicked.connect(QCoreApplication.instance().quit)
 
     def initButton(self):
+        widget.setCurrentIndex(widget.currentIndex() + 1)
         print("init")
     def continueButton(self):
         print("continue")
-
+class InitClass(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        loadUi("init_screen.ui", self)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    myWindow=WindowClass()
-    myWindow.show()
+    widget = QtWidgets.QStackedWidget()
+    myWindow = WindowClass()
+    InitWindow = InitClass()
+
+    widget.addWidget(myWindow)
+    widget.addWidget(InitWindow)
+
+    widget.setFixedHeight(600)
+    widget.setFixedWidth(800)
+    widget.show()
     app.exec_()
