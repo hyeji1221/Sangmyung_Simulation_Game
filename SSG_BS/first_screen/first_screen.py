@@ -48,15 +48,20 @@ class InitClass(QMainWindow):
     def OKButton(self):
         self.label.hide()
         self.OK.hide()
+
+class ContinueCalss(QMainWindow):
+    print("A")
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = QtWidgets.QStackedWidget()
     myWindow = WindowClass()
     InitWindow = InitClass()
+    continueWindow=ContinueCalss()
 
     widget.addWidget(myWindow)
     widget.addWidget(InitWindow)
-
+    widget.addWidget(continueWindow)
     widget.setFixedHeight(600)
     widget.setFixedWidth(800)
     widget.show()
