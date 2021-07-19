@@ -32,7 +32,12 @@ class InitClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("init_screen.ui", self)
-
+        self.time.clicked.connect(self.timeButton)
+    def timeButton(self):
+        file_names=QFileDialog.getOpenFileNames(self)
+        for file in file_names[0]:
+            exist=self.textEdit.toPlainText()
+            self.textEdit.setText(exist+file+'\n')
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = QtWidgets.QStackedWidget()
