@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import *
 
 import os
 
@@ -32,12 +33,21 @@ class InitClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("init_screen.ui", self)
+        self.label.hide()
+        self.OK.hide()
         self.time.clicked.connect(self.timeButton)
     def timeButton(self):
-        file_names=QFileDialog.getOpenFileNames(self)
-        for file in file_names[0]:
-            exist=self.textEdit.toPlainText()
-            self.textEdit.setText(exist+file+'\n')
+        self.label.show()
+        file=QFileDialog.getOpenFileNames(self)
+        self.qPixmapFileVar = QPixmap()
+        self.qPixmapFileVar.load("time.jpg")
+        self.qPixmapFileVar = self.qPixmapFileVar.scaled(801,571)
+        self.label.setPixmap(self.qPixmapFileVar)
+        self.OK.show()
+        self.OK.clicked.connect(self.OKButton)
+    def OKButton(self):
+        self.label.hide()
+        self.OK.hide()
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = QtWidgets.QStackedWidget()
