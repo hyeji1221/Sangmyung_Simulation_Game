@@ -28,6 +28,7 @@ class WindowClass(QMainWindow):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         print("init")
     def continueButton(self):
+        widget.setCurrentIndex(widget.currentIndex() + 2)
         print("continue")
 class InitClass(QMainWindow):
     def __init__(self):
@@ -50,7 +51,9 @@ class InitClass(QMainWindow):
         self.OK.hide()
 
 class ContinueCalss(QMainWindow):
-    print("A")
+    def __init__(self):
+        super().__init__()
+        loadUi("continue_screen.ui", self)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
