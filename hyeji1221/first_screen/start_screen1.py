@@ -4,6 +4,7 @@ from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 form_class=uic.loadUiType("start_first.ui")[0]
 
@@ -32,6 +33,6 @@ class start_screen1(QDialog,QWidget, form_class):
         global FileOpen
         FileOpen = QFileDialog.getOpenFileName(self, 'Open file', './')
         pixmap = QPixmap(FileOpen[0])
-        self.image_label.setPixmap(pixmap)
+        self.image_label.setPixmap(pixmap.scaled(self.image_label.size(), QtCore.Qt.IgnoreAspectRatio))
         self.show()
         print(FileOpen[0])
