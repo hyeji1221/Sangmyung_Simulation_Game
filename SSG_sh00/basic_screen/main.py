@@ -45,7 +45,7 @@ class WindowClass(QMainWindow, form_class):
         self.exit.disconnect()
 
     def closeEvent(self, QCloseEvent):
-        re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
+        re = QMessageBox.question(self, "종료", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
 
         if re == QMessageBox.Yes:
             print("exit")
