@@ -11,9 +11,17 @@ class WindowClass(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.menuBox.hide()
+        self.optionBox.hide()
 
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
+        self.nextButton.clicked.connect(self.selectStart)
+
+    def selectStart(self):
+        self.optionBox.show()
+        # self.hillUpButton.clicked.connect()
+        # self.hillButton.clicked.connect()
+        # self.hillDownButton.clicked.connect()
 
     def slot_toggle(self):
         if self.menu.isChecked():
