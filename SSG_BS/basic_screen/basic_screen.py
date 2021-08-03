@@ -10,7 +10,7 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.menu.hide()
+        self.menuBox.hide()
 
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
