@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
+from PyQt5 import uic, QtGui, QtCore
 
 form_class=uic.loadUiType("mission.ui")[0]
 
@@ -13,7 +13,16 @@ class WindowClass(QMainWindow, form_class):
         self.menuBox.hide()
         self.missionBox.hide()
         self.mission_show.hide()
+        self.front.hide()
+        self.left.hide()
+        self.right.hide()
         self.next.hide()
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
         self.chat.setText("미션이 도착했습니다. 확인해보세요!")
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
