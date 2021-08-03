@@ -78,7 +78,15 @@ class WindowClass(QMainWindow, form_class):
         self.front.show()
         self.left.show()
         self.right.show()
-
+        self.front.clicked.connect(self.frontButton)
+        self.left.clicked.connect(self.leftButton)
+        self.right.clicked.connect(self.rightButton)
+    def frontButton(self):
+        print("여긴 아닌것 같다.")
+    def leftButton(self):
+        print("여긴 아닌것 같다.")
+    def rightButton(self):
+        print("도서관으로 가보겠다.")
     def closeEvent(self, QCloseEvent):
         re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
 
