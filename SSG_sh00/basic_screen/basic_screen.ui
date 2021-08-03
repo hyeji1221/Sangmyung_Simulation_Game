@@ -156,9 +156,9 @@
    <widget class="QGroupBox" name="optionBox">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>200</x>
       <y>110</y>
-      <width>341</width>
+      <width>401</width>
       <height>211</height>
      </rect>
     </property>
@@ -182,7 +182,7 @@
     <widget class="QPushButton" name="hillUpButton">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>30</x>
        <y>30</y>
        <width>339</width>
        <height>28</height>
@@ -195,7 +195,7 @@
     <widget class="QPushButton" name="hillButton">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>30</x>
        <y>90</y>
        <width>339</width>
        <height>28</height>
@@ -208,7 +208,7 @@
     <widget class="QPushButton" name="hillDownButton">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>30</x>
        <y>150</y>
        <width>339</width>
        <height>28</height>
