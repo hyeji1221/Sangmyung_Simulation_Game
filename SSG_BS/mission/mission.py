@@ -19,10 +19,10 @@ class WindowClass(QMainWindow, form_class):
         self.next.hide()
         self.front.setIcon(QtGui.QIcon('front.png'))
         self.front.setIconSize(QtCore.QSize(75, 71))
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.left.setIcon(QtGui.QIcon('left.png'))
+        self.left.setIconSize(QtCore.QSize(75, 71))
+        self.right.setIcon(QtGui.QIcon('right.png'))
+        self.right.setIconSize(QtCore.QSize(75, 71))
         self.chat.setText("미션이 도착했습니다. 확인해보세요!")
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
@@ -75,6 +75,9 @@ class WindowClass(QMainWindow, form_class):
     def nextButton(self):
         self.chat.setText("도서관을 찾으러 갑시다.")
         self.next.hide()
+        self.front.show()
+        self.left.show()
+        self.right.show()
 
     def closeEvent(self, QCloseEvent):
         re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
