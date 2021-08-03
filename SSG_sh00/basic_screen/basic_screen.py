@@ -12,16 +12,30 @@ class WindowClass(QMainWindow, form_class):
         self.setupUi(self)
         self.menuBox.hide()
         self.optionBox.hide()
+        self.optionBox_2.hide()
 
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
+
         self.nextButton.clicked.connect(self.selectStart)
 
     def selectStart(self):
         self.optionBox.show()
-        # self.hillUpButton.clicked.connect()
+        self.nextButton.hide()
+        self.hillUpButton.clicked.connect(self.selectHillUp)
         # self.hillButton.clicked.connect()
         # self.hillDownButton.clicked.connect()
+
+    def selectHillUp(self):
+        self.optionBox.hide()
+        self.optionBox_2.show()
+        self.chat.setText("점심 장소는 \"언덕 위에 있는,")
+        self.andamiroButton.clicked.connect(self.selectANDAMIRO)
+
+    def selectANDAMIRO(self):
+        self.optionBox_2.hide()
+        self.chat.setText("점심 장소는 \"언덕 위에 있는 안다미로!\".")
+
 
     def slot_toggle(self):
         if self.menu.isChecked():
