@@ -166,10 +166,10 @@ class StudentClass(QMainWindow):
     def leftButton(self):
         self.go_2.show()
         self.chat.setText("프린트를 찾으러 간다.")
+        self.go_2.clicked.connect(self.Go2Button)
     def rightButton(self):
         self.chat.setText("여긴 아닌 것 같다.")
         self.go_2.hide()
-        self.go_2.clicked.connect(self.Go2Button)
     def Go2Button(self):
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
@@ -177,6 +177,43 @@ class PrintClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("print.ui",self)
+        self.menuBox.hide()
+        self.mission_show.hide()
+        self.front.hide()
+        self.left.hide()
+        self.right.hide()
+        self.go.hide()
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.left.setIcon(QtGui.QIcon('left.png'))
+        self.left.setIconSize(QtCore.QSize(75, 71))
+        self.right.setIcon(QtGui.QIcon('right.png'))
+        self.right.setIconSize(QtCore.QSize(75, 71))
+        self.chat.setText("계속 찾아보자.")
+        self.next.clicked.connect(self.nextButton)
+    def nextButton(self):
+        self.front.show()
+        self.left.show()
+        self.right.show()
+        self.front.clicked.connect(self.frontButton)
+        self.left.clicked.connect(self.leftButton)
+        self.right.clicked.connect(self.rightButton)
+    def frontButton(self):
+        self.go.show()
+        self.chat.setText("다왔다.")
+        self.go.clicked.connect(self.GoButton)
+    def leftButton(self):
+        self.go.hide()
+        self.chat.setText("여긴 아닌 것 같다.")
+    def rightButton(self):
+        self.chat.setText("여긴 아닌 것 같다.")
+        self.go.hide()
+    def GoButton(self):
+        self.front.hide()
+        self.left.hide()
+        self.right.hide()
+        self.chat.setText("프린터기를 찾았다.")
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
