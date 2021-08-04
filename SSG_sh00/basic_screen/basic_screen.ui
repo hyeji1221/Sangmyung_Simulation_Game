@@ -258,7 +258,7 @@
       <string>안다미로</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="hillButton_3">
+    <widget class="QPushButton" name="studentCafeteriaButton">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -271,7 +271,7 @@
       <string>학생식당</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="hillDownButton_3">
+    <widget class="QPushButton" name="bluepotButton">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -284,7 +284,7 @@
       <string>블루포트</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="hillUpButton_5">
+    <widget class="QPushButton" name="muataButton">
      <property name="geometry">
       <rect>
        <x>30</x>
