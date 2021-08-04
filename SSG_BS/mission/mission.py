@@ -3,13 +3,18 @@ import sys
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtGui, QtCore
+from PyQt5 import QtWidgets
+from PyQt5.uic import loadUi
+from PyQt5.QtGui import *
 
 form_class=uic.loadUiType("mission.ui")[0]
+form_class=uic.loadUiType("library.ui")[0]
 
-class WindowClass(QMainWindow, form_class):
+class WindowClass(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        loadUi("mission.ui", self)
+
         self.menuBox.hide()
         self.missionBox.hide()
         self.mission_show.hide()
@@ -17,6 +22,7 @@ class WindowClass(QMainWindow, form_class):
         self.left.hide()
         self.right.hide()
         self.next.hide()
+        self.go.hide()
         self.front.setIcon(QtGui.QIcon('front.png'))
         self.front.setIconSize(QtCore.QSize(75, 71))
         self.left.setIcon(QtGui.QIcon('left.png'))
@@ -82,11 +88,17 @@ class WindowClass(QMainWindow, form_class):
         self.left.clicked.connect(self.leftButton)
         self.right.clicked.connect(self.rightButton)
     def frontButton(self):
-        print("여긴 아닌것 같다.")
+        self.go.hide()
+        self.chat.setText("여긴 아닌 것 같다.")
     def leftButton(self):
-        print("여긴 아닌것 같다.")
+        self.go.hide()
+        self.chat.setText("여긴 아닌 것 같다.")
     def rightButton(self):
-        print("도서관으로 가보겠다.")
+        self.chat.setText("도서관으로 가보겠다.")
+        self.go.show()
+        self.go.clicked.connect(self.GoButton)
+    def GoButton(self):
+        widget.setCurrentIndex(widget.currentIndex() + 1)
     def closeEvent(self, QCloseEvent):
         re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
 
@@ -97,8 +109,55 @@ class WindowClass(QMainWindow, form_class):
             print("Not exit")
             QCloseEvent.ignore()
 
+
+class LibraryClass(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        loadUi("library.ui", self)
+        self.menuBox.hide()
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.chat.setText("안으로 들어가자.")
+        self.front.clicked.connect(self.frontButton)
+
+
+    def frontButton(self):
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+
+class StudentClass(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        loadUi("student.ui",self)
+        self.missionBox.hide()
+        self.menuBox.hide()
+        self.go.hide()
+        self.chat.setText("도서관에 입장하기에는 학생증이 필요하다.")
+        self.next.clicked.connect(self.NextButton)
+        self.OK.clicked.connect(self.OKButton)
+
+    def NextButton(self):
+        self.missionBox.show()
+    def OKButton(self):
+        self.missionBox.hide()
+        self.chat.setText("학생증이 있으면 찍고 들어가면 된다.\n이제 프린터기를 찾아보자")
+        self.next.hide()
+        self.go.show()
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
+    # WindowClass의 인스턴스 생성
+    widget = QtWidgets.QStackedWidget()
     myWindow = WindowClass()
-    myWindow.show()
+    libraryWindow = LibraryClass()
+    studentWindow=StudentClass()
+
+    widget.addWidget(myWindow)
+    widget.addWidget(libraryWindow)
+    widget.addWidget(studentWindow)
+    widget.setFixedHeight(600)
+    widget.setFixedWidth(800)
+    widget.show()
+
+    # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()
