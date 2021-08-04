@@ -131,7 +131,17 @@ class StudentClass(QMainWindow):
         self.missionBox.hide()
         self.menuBox.hide()
         self.go.hide()
+        self.go_2.hide()
         self.chat.setText("도서관에 입장하기에는 학생증이 필요하다.")
+        self.front.hide()
+        self.left.hide()
+        self.right.hide()
+        self.front.setIcon(QtGui.QIcon('front.png'))
+        self.front.setIconSize(QtCore.QSize(75, 71))
+        self.left.setIcon(QtGui.QIcon('left.png'))
+        self.left.setIconSize(QtCore.QSize(75, 71))
+        self.right.setIcon(QtGui.QIcon('right.png'))
+        self.right.setIconSize(QtCore.QSize(75, 71))
         self.next.clicked.connect(self.NextButton)
         self.OK.clicked.connect(self.OKButton)
 
@@ -142,7 +152,31 @@ class StudentClass(QMainWindow):
         self.chat.setText("학생증이 있으면 찍고 들어가면 된다.\n이제 프린터기를 찾아보자")
         self.next.hide()
         self.go.show()
+        self.go.clicked.connect(self.GoButton)
+    def GoButton(self):
+        self.front.show()
+        self.left.show()
+        self.right.show()
+        self.front.clicked.connect(self.frontButton)
+        self.left.clicked.connect(self.leftButton)
+        self.right.clicked.connect(self.rightButton)
+    def frontButton(self):
+        self.go_2.hide()
+        self.chat.setText("여긴 아닌 것 같다.")
+    def leftButton(self):
+        self.go_2.show()
+        self.chat.setText("프린트를 찾으러 간다.")
+    def rightButton(self):
+        self.chat.setText("여긴 아닌 것 같다.")
+        self.go_2.hide()
+        self.go_2.clicked.connect(self.Go2Button)
+    def Go2Button(self):
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
+class PrintClass(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        loadUi("print.ui",self)
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
@@ -151,10 +185,13 @@ if __name__ == "__main__":
     myWindow = WindowClass()
     libraryWindow = LibraryClass()
     studentWindow=StudentClass()
+    printWindow=PrintClass()
+
 
     widget.addWidget(myWindow)
     widget.addWidget(libraryWindow)
     widget.addWidget(studentWindow)
+    widget.addWidget(printWindow)
     widget.setFixedHeight(600)
     widget.setFixedWidth(800)
     widget.show()

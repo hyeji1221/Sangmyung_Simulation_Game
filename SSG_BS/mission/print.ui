@@ -140,55 +140,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QGroupBox" name="missionBox">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>120</y>
-      <width>401</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Tip!</string>
-    </property>
-    <widget class="QLabel" name="chat_m">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>331</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="lineWidth">
-      <number>3</number>
-     </property>
-     <property name="midLineWidth">
-      <number>3</number>
-     </property>
-     <property name="text">
-      <string>학생증은 학생회관에서 발급받을 수 있다!
-또는 모바일 학생증으로 사용 할 수 있다!</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="OK">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>120</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>확인</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QLabel" name="mission_show">
     <property name="geometry">
      <rect>
@@ -224,50 +175,11 @@
      <string>다음</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="go">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>510</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>확인</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="go_2">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>510</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>확인</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="front">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>62</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="left">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>270</y>
+      <x>340</x>
+      <y>42</y>
       <width>75</width>
       <height>71</height>
      </rect>
@@ -279,14 +191,40 @@
    <widget class="QPushButton" name="right">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>270</y>
+      <x>660</x>
+      <y>250</y>
       <width>75</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="left">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>250</y>
+      <width>75</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>510</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
     </property>
    </widget>
   </widget>
