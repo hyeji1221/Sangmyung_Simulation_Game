@@ -11,8 +11,11 @@ class WindowClass(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.menuBox.hide()
-        self.optionBox.hide()
-        self.optionBox_2.hide()
+        self.hillBox.hide()
+        self.hillUpMenuBox.hide()
+        self.hillMenuBox.hide()
+        self.hillDownMenuButton.hide()
+
 
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
@@ -20,20 +23,29 @@ class WindowClass(QMainWindow, form_class):
         self.nextButton.clicked.connect(self.selectStart)
 
     def selectStart(self):
-        self.optionBox.show()
+        self.hillBox.show()
         self.nextButton.hide()
         self.hillUpButton.clicked.connect(self.selectHillUp)
-        # self.hillButton.clicked.connect()
-        # self.hillDownButton.clicked.connect()
+        self.hillButton.clicked.connect(self.selectHill)
+        self.hillDownButton.clicked.connect(self.selectHillDown)
+
+    def selectHillDown(self):
+        self.hillBox.hide()
+        self.hillDownMenuButton.show()
+
+    def selectHill(self):
+        self.hillBox.hide()
+        self.hillMenuBox.show()
+        self.chat.setText("점심 장소는 \"언덕에 있는,")
 
     def selectHillUp(self):
-        self.optionBox.hide()
-        self.optionBox_2.show()
+        self.hillBox.hide()
+        self.hillUpMenuBox.show()
         self.chat.setText("점심 장소는 \"언덕 위에 있는,")
-        self.andamiroButton.clicked.connect(self.selectANDAMIRO)
+        self.hillMenuOption1.clicked.connect(self.selectANDAMIRO)
 
     def selectANDAMIRO(self):
-        self.optionBox_2.hide()
+        self.hillUpMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 위에 있는 안다미로!\".")
 
 

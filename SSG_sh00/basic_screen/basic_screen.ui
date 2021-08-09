@@ -153,12 +153,12 @@
      <string>다음</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="optionBox">
+   <widget class="QGroupBox" name="hillBox">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>110</y>
-      <width>401</width>
+      <x>260</x>
+      <y>100</y>
+      <width>301</width>
       <height>211</height>
      </rect>
     </property>
@@ -184,7 +184,7 @@
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
@@ -197,7 +197,7 @@
       <rect>
        <x>30</x>
        <y>90</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
@@ -210,7 +210,7 @@
       <rect>
        <x>30</x>
        <y>150</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
@@ -219,12 +219,12 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="optionBox_2">
+   <widget class="QGroupBox" name="hillUpMenuBox">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>50</y>
-      <width>401</width>
+      <x>260</x>
+      <y>70</y>
+      <width>301</width>
       <height>271</height>
      </rect>
     </property>
@@ -245,56 +245,214 @@
     <property name="checked">
      <bool>false</bool>
     </property>
-    <widget class="QPushButton" name="andamiroButton">
+    <widget class="QPushButton" name="hillUpMenu1">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
      <property name="text">
-      <string>안다미로</string>
+      <string>안다미로 (한식)</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="studentCafeteriaButton">
+    <widget class="QPushButton" name="hillUpMenu2">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>90</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
      <property name="text">
-      <string>학생식당</string>
+      <string>학생식당 (한식)</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bluepotButton">
+    <widget class="QPushButton" name="hillUpMenu3">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>150</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
      <property name="text">
-      <string>블루포트</string>
+      <string>블루포트 (카페)</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="muataButton">
+    <widget class="QPushButton" name="hillUpMenu4">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>210</y>
-       <width>339</width>
+       <width>241</width>
        <height>28</height>
       </rect>
      </property>
      <property name="text">
-      <string>무아타</string>
+      <string>무아타 (분식)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="hillMenuBox">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>70</y>
+      <width>301</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="hillMenuOption1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>한식</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillMenuOption2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>분식</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillMenuOption3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>150</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>빵류</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillMenuOption4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>기타</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="hillDownMenuButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>70</y>
+      <width>301</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="hillDownMenu1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>나성집 (한식)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillDownMenu2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>송스키친 (양식)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillDownMenu3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>150</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>원테이블 (양식)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hillDownMenu4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>241</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>부암동 나들이</string>
      </property>
     </widget>
    </widget>
