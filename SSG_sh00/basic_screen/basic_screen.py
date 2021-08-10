@@ -3,6 +3,7 @@ import sys
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from lunch_location_screen import lunch_location_screen
 
 form_class=uic.loadUiType("lunch_screen.ui")[0]
 
@@ -19,6 +20,7 @@ class WindowClass(QMainWindow, form_class):
         self.hillMenuBox2.hide()
         self.hillMenuBox3.hide()
         self.hillMenuBox4.hide()
+        self.nextButton2.hide()
 
 
         self.menu.setCheckable(True)
@@ -109,7 +111,9 @@ class WindowClass(QMainWindow, form_class):
         self.chat.setText("점심 장소는 \"언덕에 있는 The함께식탁!\".")
     def selectHillMenu1_2(self):
         self.hillMenuBox1.hide()
+        self.nextButton2.show()
         self.chat.setText("점심 장소는 \"언덕에 있는 부대통령 뚝배기!\".")
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu1_3(self):
         self.hillMenuBox1.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 치즈밥있슈!\".")
@@ -167,6 +171,11 @@ class WindowClass(QMainWindow, form_class):
         self.hillDownMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 아래에 있는 부암동으로 가자!\".")
 
+# 다음 UI화면으로 이동 -------------------------------------------------------------------
+    def lunchLocation(self):
+        self.hide()
+        self.lunch_location_screen = lunch_location_screen()
+
 # 메뉴 버튼 구현 -------------------------------------------------------------------------
     def slot_toggle(self):
         if self.menu.isChecked():
@@ -200,7 +209,7 @@ class WindowClass(QMainWindow, form_class):
         self.map.disconnect()
         self.mission.disconnect()
         self.save.disconnect()
-        self.exit.disconnect()
+        self.time.disconnect()
 
     def closeEvent(self, QCloseEvent):
         re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
