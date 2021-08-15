@@ -18,6 +18,7 @@ class WindowClass(QMainWindow):
         self.menuBox.hide()
         self.missionBox.hide()
         self.mission_show.hide()
+        self.imageLabel.hide()
         self.front.hide()
         self.left.hide()
         self.right.hide()
@@ -73,12 +74,15 @@ class WindowClass(QMainWindow):
         self.missionBox.hide()
         self.mission_show.show()
         self.next.show()
+        self.imageLabel.show()
         self.next.clicked.connect(self.nextButton)
 
     def YesButton(self):
         self.missionBox.hide()
 
     def nextButton(self):
+        self.pixmap = QImage("li_1.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("도서관을 찾으러 갑시다.")
         self.next.hide()
         self.front.show()
@@ -117,6 +121,8 @@ class LibraryClass(QMainWindow):
         self.menuBox.hide()
         self.front.setIcon(QtGui.QIcon('front.png'))
         self.front.setIconSize(QtCore.QSize(75, 71))
+        self.pixmap = QImage("li_2.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("안으로 들어가자.")
         self.front.clicked.connect(self.frontButton)
 
@@ -128,6 +134,8 @@ class StudentClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("student.ui",self)
+        self.pixmap = QImage("li_3.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.missionBox.hide()
         self.menuBox.hide()
         self.go.hide()
@@ -154,6 +162,8 @@ class StudentClass(QMainWindow):
         self.go.show()
         self.go.clicked.connect(self.GoButton)
     def GoButton(self):
+        self.pixmap = QImage("li_4.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.show()
         self.left.show()
         self.right.show()
@@ -178,7 +188,9 @@ class PrintClass(QMainWindow):
         super().__init__()
         loadUi("print.ui",self)
         self.menuBox.hide()
+        self.com.hide()
         self.mission_show.hide()
+        self.missionBox.hide()
         self.front.hide()
         self.left.hide()
         self.right.hide()
@@ -192,6 +204,8 @@ class PrintClass(QMainWindow):
         self.chat.setText("계속 찾아보자.")
         self.next.clicked.connect(self.nextButton)
     def nextButton(self):
+        self.pixmap = QImage("li_5.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.show()
         self.left.show()
         self.right.show()
@@ -209,10 +223,22 @@ class PrintClass(QMainWindow):
         self.chat.setText("여긴 아닌 것 같다.")
         self.go.hide()
     def GoButton(self):
+        self.pixmap = QImage("li_7.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.hide()
         self.left.hide()
         self.right.hide()
+        self.go.hide()
+        self.com.show()
         self.chat.setText("프린터기를 찾았다.")
+        self.com.clicked.connect(self.comButton)
+    def comButton(self):
+        self.mission_show.hide()
+        self.missionBox.show()
+        self.OK.clicked.connect(self.OKButton)
+    def OKButton(self):
+
+        print("다음화면으로")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

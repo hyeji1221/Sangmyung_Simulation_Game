@@ -136,7 +136,7 @@ class WindowClass(QMainWindow, form_class):
 
     def selectHillMenu3_1(self):
         self.hillMenuBox3.hide()
-        self.chat.setText("점심 장소는 \"언덕에 있는 멜팅그릴!\".")
+        self.chat.setText("점심 장소는 \"언덕에 있-는 멜팅그릴!\".")
     def selectHillMenu3_2(self):
         self.hillMenuBox3.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 샌드앤닭!\".")
