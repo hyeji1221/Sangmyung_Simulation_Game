@@ -2,16 +2,19 @@ import sys
 
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
+from PyQt5 import uic, QtGui, QtCore
+from PyQt5 import QtWidgets
+from PyQt5.uic import loadUi
+from PyQt5.QtGui import *
 
 form_class=uic.loadUiType("basic_screen.ui")[0]
 
-class WindowClass(QMainWindow, form_class):
+class WindowClass(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        loadUi("basic_screen.ui", self)
         self.menuBox.hide()
-
+        self.imageLabel.hide()
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
 
@@ -32,7 +35,9 @@ class WindowClass(QMainWindow, form_class):
         self.exit.clicked.connect(self.close)
 
     def mapButton(self):
-        print("map")
+        self.imageLabel.show()
+        self.pixmap = QImage("map.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
 
     def missionButton(self):
         print("mission")
@@ -60,7 +65,17 @@ class WindowClass(QMainWindow, form_class):
             QCloseEvent.ignore()
 
 if __name__ == "__main__":
+
     app = QApplication(sys.argv)
+
+    # WindowClass의 인스턴스 생성
+    widget = QtWidgets.QStackedWidget()
     myWindow = WindowClass()
-    myWindow.show()
+    widget.addWidget(myWindow)
+
+    widget.setFixedHeight(600)
+    widget.setFixedWidth(800)
+    widget.show()
+
+    # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()

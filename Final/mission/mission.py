@@ -24,6 +24,7 @@ class WindowClass(QMainWindow):
         self.right.hide()
         self.next.hide()
         self.go.hide()
+        self.mapclose.hide()
         self.front.setIcon(QtGui.QIcon('front.png'))
         self.front.setIconSize(QtCore.QSize(75, 71))
         self.left.setIcon(QtGui.QIcon('left.png'))
@@ -51,7 +52,15 @@ class WindowClass(QMainWindow):
         self.exit.clicked.connect(self.close)
 
     def mapButton(self):
-        print("map")
+        self.imageLabel.show()
+        self.pixmap = QImage("map.jpg").scaled(651, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
+        self.mapclose.show()
+        self.mapclose.clicked.connect(self.mapcloseButton)
+
+    def mapcloseButton(self):
+        self.imageLabel.hide()
+        self.mapclose.hide()
 
     def missionButton(self):
         self.missionBox.show()
@@ -74,13 +83,13 @@ class WindowClass(QMainWindow):
         self.missionBox.hide()
         self.mission_show.show()
         self.next.show()
-        self.imageLabel.show()
         self.next.clicked.connect(self.nextButton)
 
     def YesButton(self):
         self.missionBox.hide()
 
     def nextButton(self):
+        self.imageLabel.show()
         self.pixmap = QImage("li_1.jpg").scaled(651, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("도서관을 찾으러 갑시다.")

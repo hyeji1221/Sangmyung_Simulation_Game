@@ -301,6 +301,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="mapclose">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>340</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>지도 닫기</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

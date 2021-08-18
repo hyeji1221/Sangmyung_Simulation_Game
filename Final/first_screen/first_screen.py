@@ -6,6 +6,7 @@ from start_screen1 import start_screen1
 from SaveInformation_screen import SaveInformation_screen
 
 form_class = uic.loadUiType("first_screen.ui")[0]
+global name,id,grade,cl
 
 class WindowClass(QMainWindow, form_class):
     def __init__(self):

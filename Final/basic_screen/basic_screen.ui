@@ -140,6 +140,19 @@
      <string>텍스트</string>
     </property>
    </widget>
+   <widget class="QLabel" name="imagelabel">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>651</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
