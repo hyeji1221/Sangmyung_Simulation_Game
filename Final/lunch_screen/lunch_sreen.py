@@ -4,6 +4,8 @@ from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from lunch_location_screen import lunch_location_screen
+import pandas as pd
+import pathlib
 
 form_class=uic.loadUiType("lunch_screen.ui")[0]
 
@@ -201,6 +203,12 @@ class WindowClass(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
+        df = pd.DataFrame([['path', str(pathlib.Path(__file__).parent.absolute())]],
+                          columns=['1', '2'])
+
+        df.to_csv('../info.csv', index=False,
+                  encoding='cp949')
+
 
     def timeButton(self):
         print("time")

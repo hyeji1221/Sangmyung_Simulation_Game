@@ -6,6 +6,8 @@ from PyQt5 import uic, QtGui, QtCore
 from PyQt5 import QtWidgets
 from PyQt5.uic import loadUi
 from PyQt5.QtGui import *
+import pandas as pd
+import pathlib
 
 form_class=uic.loadUiType("mission.ui")[0]
 form_class=uic.loadUiType("library.ui")[0]
@@ -69,6 +71,11 @@ class WindowClass(QMainWindow):
 
     def saveButton(self):
         print("save")
+        df = pd.DataFrame([['path', str(pathlib.Path(__file__).parent.absolute())]],
+                          columns=['1', '2'])
+
+        df.to_csv('../info.csv', index=False,
+                  encoding='cp949')
 
     def timeButton(self):
         print("time")
