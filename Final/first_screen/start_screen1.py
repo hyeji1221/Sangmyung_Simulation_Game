@@ -6,6 +6,7 @@ from PyQt5 import uic
 from PyQt5.QtGui import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+global name,id,cl,grade
 form_class=uic.loadUiType("start_first.ui")[0]
 
 class start_screen1(QDialog,QWidget, form_class):
@@ -23,11 +24,11 @@ class start_screen1(QDialog,QWidget, form_class):
         self.close()
 
     def startButton(self):
-        print(self.textEdit.toPlainText())
-        print(self.textEdit_2.toPlainText())
-        print(self.textEdit_3.toPlainText())
-        print(self.textEdit_4.toPlainText())
-        #print("init")
+        name = self.textEdit.toPlainText()
+        id= self.textEdit_2.toPlainText()
+        cl=self.textEdit_3.toPlainText()
+        grade=self.textEdit_4.toPlainText()
+        print(name,id,cl,grade)
 
     def timeButton(self):
         global FileOpen

@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
 
+
 form_SaveInformationScreen = uic.loadUiType("SaveInformation_screen.ui")[0]
 
 class SaveInformation_screen(QDialog,QWidget, form_SaveInformationScreen):
