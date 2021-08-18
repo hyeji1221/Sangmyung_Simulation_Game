@@ -28,7 +28,7 @@ class start_screen1(QDialog,QWidget, form_class):
         id= self.textEdit_2.toPlainText()
         cl=self.textEdit_3.toPlainText()
         grade=self.textEdit_4.toPlainText()
-        print(name,id,cl,grade)
+
 
     def timeButton(self):
         global FileOpen
