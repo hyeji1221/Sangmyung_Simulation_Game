@@ -245,6 +245,26 @@
      <string>뒤로</string>
     </property>
    </widget>
+   <widget class="QLabel" name="imgLabel">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>70</y>
+      <width>541</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>imgLabel</zorder>
+   <zorder>menu</zorder>
+   <zorder>menuBox</zorder>
+   <zorder>chat</zorder>
+   <zorder>goHomeMenu</zorder>
+   <zorder>nextButton</zorder>
+   <zorder>backButton</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
