@@ -22,6 +22,7 @@ class WindowClass(QMainWindow, form_class):
     def selectGoHome(self):
         self.goHomeMenu.show()
         self.nextButton.hide()
+        self.backButton.hide()
         self.chat.setText("등교 할 시간이다. 어떻게 갈까?")
         self.bus7016.clicked.connect(self.selectbus7016)
         self.bus13.clicked.connect(self.selectbus13)
