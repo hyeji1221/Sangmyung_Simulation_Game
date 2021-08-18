@@ -13,6 +13,7 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.setupUi(self)
         self.show()  # 두번째 ui창을 띄우기
         self.menuBox.hide()
+        self.finishButton.hide()
 
         self.condition=0
         self.pixmap = QImage("location1.jpg").scaled(651, 361)
@@ -90,13 +91,16 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
         elif self.pixmap==QImage("location8.jpg").scaled(651, 361):
             if condition==3:
+                self.finishButton.show()
                 self.pixmap = QImage("location9.jpg").scaled(651, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("목적지에 도착했다!")
+                self.finishButton.clicked.connect(self.nextscreen)
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-
+    def nextscreen(self):
+        self.chat.setText("다음화면으로 넘어가자.")
 
 # 메뉴 버튼 구현 -------------------------------------------------------------------------
     def slot_toggle(self):
