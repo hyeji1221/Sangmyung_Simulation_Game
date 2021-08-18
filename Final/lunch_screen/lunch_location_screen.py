@@ -102,7 +102,7 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
 
     def nextscreen(self):
         self.hide()
-        self.mission=Main()
+        self.mission=Mission()
 
 # 메뉴 버튼 구현 -------------------------------------------------------------------------
     def slot_toggle(self):

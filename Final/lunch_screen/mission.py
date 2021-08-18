@@ -108,7 +108,7 @@ class WindowClass(QMainWindow):
         self.go.show()
         self.go.clicked.connect(self.GoButton)
     def GoButton(self):
-        Main.widget.setCurrentIndex(Main.widget.currentIndex() + 1)
+        Mission.widget.setCurrentIndex(Mission.widget.currentIndex() + 1)
     def closeEvent(self, QCloseEvent):
         re = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?", QMessageBox.Yes | QMessageBox.No)
 
@@ -134,7 +134,7 @@ class LibraryClass(QMainWindow):
 
 
     def frontButton(self):
-        Main.widget.setCurrentIndex(Main.widget.currentIndex() + 1)
+        Mission.widget.setCurrentIndex(Mission.widget.currentIndex() + 1)
 
 class StudentClass(QMainWindow):
     def __init__(self):
@@ -187,7 +187,7 @@ class StudentClass(QMainWindow):
         self.chat.setText("여긴 아닌 것 같다.")
         self.go_2.hide()
     def Go2Button(self):
-        Main.widget.setCurrentIndex(Main.widget.currentIndex() + 1)
+        Mission.widget.setCurrentIndex(Mission.widget.currentIndex() + 1)
 
 class PrintClass(QMainWindow):
     def __init__(self):
@@ -246,7 +246,7 @@ class PrintClass(QMainWindow):
 
         print("다음화면으로")
 
-class Main():
+class Mission(QDialog,QWidget):
     #if __name__ == "__main__":
     app = QApplication(sys.argv)
 
