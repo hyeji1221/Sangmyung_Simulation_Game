@@ -203,8 +203,8 @@ class WindowClass(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
-        df = pd.DataFrame([['path', str(pathlib.Path(__file__).parent.absolute())]],
-                          columns=['1', '2'])
+        df = pd.DataFrame([[str(pathlib.Path(__file__).parent.absolute())]],
+                          columns=['path'])
 
         df.to_csv('../info.csv', index=False,
                   encoding='cp949')
