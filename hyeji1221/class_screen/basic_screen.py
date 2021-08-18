@@ -48,7 +48,7 @@ class WindowClass(QMainWindow, form_class):
         self.downBtn.show()
         self.upBtn.show()
 
-    def finish_btn(self):
+    def finish_btn(self): # 종료버튼 클릭
         self.start()
 
 
