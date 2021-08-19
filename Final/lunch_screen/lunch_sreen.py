@@ -9,10 +9,11 @@ import pathlib
 
 form_class=uic.loadUiType("lunch_screen.ui")[0]
 
-class WindowClass(QMainWindow, form_class):
+class lunch_screen(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.show()
         self.menuBox.hide()
         self.hillBox.hide()
         self.hillUpMenuBox.hide()
@@ -229,8 +230,3 @@ class WindowClass(QMainWindow, form_class):
             print("Not exit")
             QCloseEvent.ignore()
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    myWindow = WindowClass()
-    myWindow.show()
-    app.exec_()

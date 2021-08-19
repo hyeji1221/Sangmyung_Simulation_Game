@@ -13,6 +13,7 @@ class WindowClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("mission.ui", self)
+        self.show()
         self.menuBox.hide()
         self.missionBox.hide()
         self.mission_show.hide()

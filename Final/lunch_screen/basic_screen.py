@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import *
+from lunch_sreen import lunch_screen
 
 form_class=uic.loadUiType("basic_screen.ui")[0]
 
@@ -113,8 +114,7 @@ class WindowClass(QMainWindow, form_class):
         if (self.number == 20):
             self.chat.setText("    도착!\n\n\n\n\n    종료하시겠습니까?")
             self.finishBtn.show()
-
-            self.upShow()
+            self.finishBtn.clicked.connect(self.finishBtnButton)
         elif (self.number == 1):
             self.chat.setText("    시작!")
             self.upShow()
@@ -139,6 +139,9 @@ class WindowClass(QMainWindow, form_class):
             self.upShow()
             self.chat.setText("    직진하자!")
 
+    def finishBtnButton(self):
+        self.hide()
+        self.lunch_screen = lunch_screen()
 
     def up_btn(self):
         self.number += 1
