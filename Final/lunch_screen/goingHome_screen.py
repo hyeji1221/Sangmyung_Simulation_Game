@@ -3,10 +3,11 @@ import sys
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from PyQt5.QtGui import *
 
 form_class=uic.loadUiType("going_home_screen.ui")[0]
 
-class goingHome_screen(QDialog,QWidget, form_class):
+class goingHome_screen(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
