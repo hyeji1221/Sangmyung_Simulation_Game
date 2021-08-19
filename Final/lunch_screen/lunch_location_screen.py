@@ -4,7 +4,8 @@ from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
-from mission import *
+from mission import Mission
+
 
 form_lunch_location_screen = uic.loadUiType("lunch_location_screen.ui")[0]
 

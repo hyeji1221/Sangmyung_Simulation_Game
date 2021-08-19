@@ -6,10 +6,11 @@ from PyQt5 import uic
 
 form_class=uic.loadUiType("going_home_screen.ui")[0]
 
-class WindowClass(QMainWindow, form_class):
+class goingHome_screen(QDialog,QWidget, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.show()
         self.menuBox.hide()
         self.goHomeMenu.hide()
         self.backButton.hide()
@@ -110,9 +111,3 @@ class WindowClass(QMainWindow, form_class):
         else:
             print("Not exit")
             QCloseEvent.ignore()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    myWindow = WindowClass()
-    myWindow.show()
-    app.exec_()

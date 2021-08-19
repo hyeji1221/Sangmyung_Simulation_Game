@@ -6,6 +6,7 @@ from PyQt5 import uic, QtGui, QtCore
 from PyQt5 import QtWidgets
 from PyQt5.uic import loadUi
 from PyQt5.QtGui import *
+from goingHome_screen import goingHome_screen
 
 class WindowClass(QMainWindow):
 
@@ -243,27 +244,27 @@ class PrintClass(QMainWindow):
         self.missionBox.show()
         self.OK.clicked.connect(self.OKButton)
     def OKButton(self):
-
-        print("다음화면으로")
+        self.hide()
+        self.goingHome_screen=goingHome_screen()
 
 class Mission(QDialog,QWidget):
-    #if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    #if __name__ == "lunch_screen":
+        app = QApplication(sys.argv)
 
-    # WindowClass의 인스턴스 생성
-    widget = QtWidgets.QStackedWidget()
-    myWindow = WindowClass()
-    libraryWindow = LibraryClass()
-    studentWindow = StudentClass()
-    printWindow = PrintClass()
+        # WindowClass의 인스턴스 생성
+        widget = QtWidgets.QStackedWidget()
+        myWindow = WindowClass()
+        libraryWindow = LibraryClass()
+        studentWindow = StudentClass()
+        printWindow = PrintClass()
 
-    widget.addWidget(myWindow)
-    widget.addWidget(libraryWindow)
-    widget.addWidget(studentWindow)
-    widget.addWidget(printWindow)
-    widget.setFixedHeight(600)
-    widget.setFixedWidth(800)
-    widget.show()
+        widget.addWidget(myWindow)
+        widget.addWidget(libraryWindow)
+        widget.addWidget(studentWindow)
+        widget.addWidget(printWindow)
+        widget.setFixedHeight(600)
+        widget.setFixedWidth(800)
+        widget.show()
 
     # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
-    #app.exec_()
+        #app.exec_()
