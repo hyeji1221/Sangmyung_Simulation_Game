@@ -19,21 +19,27 @@ class SaveInformation_screen(QDialog,QWidget, form_SaveInformationScreen):
 
         self.cancelButton.clicked.connect(self.Home)
         self.data1Start.clicked.connect(self.dataStart)
+        self.dataset()
 
     def Home(self):
         self.close()  # 창 닫기
 
     def dataStart(self):
-        data = pd.read_csv('../info.csv')
+        print("hi")
+        data = pd.read_csv('../info1.csv')
         path = data['path'][0]
-        path1 = path+'\lunch_screen.py'
-        print(path1)
-        subprocess.call(['python', path1])
-        #exec(open(str(path1)).read())
+        print(path)
+        subprocess.call(['python', path])
 
-    def a(self):
-        path1="a"
-        args = '"%s" "%s" "%s"' % (sys.executable,  # command
-                                   path1,  # argv[0]
-                                   os.path.basename(path1))  # argv[1]
-        proc = subprocess.run(args)
+    def dataset(self):
+        data = pd.read_csv('../info1.csv')
+        name = data['name'][0]
+        id = data['id'][0]
+        cl = data['cl'][0]
+        grade = data['grade'][0]
+        print('hi')
+        print(name, id, cl, grade)
+        self.Data1_name.setText(str(name))
+        self.Data1_ID.setText(str(id))
+        self.Data1_department.setText(str(cl))
+        self.Data1_grade.setText(str(grade))

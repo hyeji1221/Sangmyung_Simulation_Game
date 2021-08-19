@@ -6,6 +6,9 @@ from PyQt5 import uic
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import *
 from lunch_sreen import lunch_screen
+import numpy as np
+import pandas as pd
+import pathlib
 
 form_class=uic.loadUiType("basic_screen.ui")[0]
 
@@ -78,6 +81,14 @@ class WindowClass(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
+        pathpath = str(pathlib.Path(__file__).parent.absolute())+"/basic_screen.py"
+        info = pd.read_csv("../info1.csv") # , index_col='Date'
+
+        new_info = info.copy()
+        new_info['path'] = pathpath
+        new_info.to_csv('../info1.csv', index=False,
+                  encoding='cp949')
+
 
     def timeButton(self):
         print("time")

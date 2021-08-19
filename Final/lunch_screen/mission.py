@@ -7,6 +7,8 @@ from PyQt5 import QtWidgets
 from PyQt5.uic import loadUi
 from PyQt5.QtGui import *
 from goingHome_screen import goingHome_screen
+import pathlib
+import pandas as pd
 
 class WindowClass(QMainWindow):
 
@@ -68,6 +70,13 @@ class WindowClass(QMainWindow):
 
     def saveButton(self):
         print("save")
+        pathpath = str(pathlib.Path(__file__).parent.absolute()) + "/mission.py"
+        info = pd.read_csv("../info1.csv")  # , index_col='Date'
+
+        new_info = info.copy()
+        new_info['path'] = pathpath
+        new_info.to_csv('../info1.csv', index=False,
+                        encoding='cp949')
 
     def timeButton(self):
         print("time")

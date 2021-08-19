@@ -204,11 +204,13 @@ class lunch_screen(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
-        df = pd.DataFrame([[str(pathlib.Path(__file__).parent.absolute())]],
-                          columns=['path'])
+        pathpath = str(pathlib.Path(__file__).parent.absolute()) + "/lunch_sreen.py"
+        info = pd.read_csv("../info1.csv")  # , index_col='Date'
 
-        df.to_csv('../info.csv', index=False,
-                  encoding='cp949')
+        new_info = info.copy()
+        new_info['path'] = pathpath
+        new_info.to_csv('../info1.csv', index=False,
+                        encoding='cp949')
 
 
     def timeButton(self):

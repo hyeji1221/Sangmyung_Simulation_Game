@@ -5,8 +5,9 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
 from PyQt5 import QtCore, QtGui, QtWidgets
+import pathlib
+import pandas as pd
 
-global name,id,cl,grade
 form_class=uic.loadUiType("start_first.ui")[0]
 
 class start_screen1(QDialog,QWidget, form_class):
@@ -18,6 +19,7 @@ class start_screen1(QDialog,QWidget, form_class):
         self.start_btn.clicked.connect(self.startButton)
         self.time_btn.clicked.connect(self.timeButton)
         self.cancel_btn.clicked.connect(self.cancelBtn)
+        self.file=""
 
 
     def cancelBtn(self):
@@ -27,7 +29,14 @@ class start_screen1(QDialog,QWidget, form_class):
         name = self.textEdit.toPlainText()
         id= self.textEdit_2.toPlainText()
         cl=self.textEdit_3.toPlainText()
-        grade=self.textEdit_4.toPlainText()
+        grade=self.spinBox.value()
+
+        df = pd.DataFrame([[name, id, cl, grade, self.file, ""]],
+                          columns=['name', 'id', 'cl', 'grade', 'time', 'path'])
+        df.to_csv('../info1.csv', index=False,
+                  encoding='utf-8-sig')
+
+        print(name, id, cl)
 
 
     def timeButton(self):
@@ -37,3 +46,4 @@ class start_screen1(QDialog,QWidget, form_class):
         self.image_label.setPixmap(pixmap.scaled(self.image_label.size(), QtCore.Qt.IgnoreAspectRatio))
         self.show()
         print(FileOpen[0])
+        self.file=FileOpen[0]

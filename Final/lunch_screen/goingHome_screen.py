@@ -4,6 +4,8 @@ from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import *
+import pandas as pd
+import pathlib
 
 form_class=uic.loadUiType("going_home_screen.ui")[0]
 
@@ -93,6 +95,13 @@ class goingHome_screen(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
+        pathpath = str(pathlib.Path(__file__).parent.absolute()) + "/goingHome_screen.py"
+        info = pd.read_csv("../info1.csv")  # , index_col='Date'
+
+        new_info = info.copy()
+        new_info['path'] = pathpath
+        new_info.to_csv('../info1.csv', index=False,
+                        encoding='cp949')
 
     def timeButton(self):
         print("time")
