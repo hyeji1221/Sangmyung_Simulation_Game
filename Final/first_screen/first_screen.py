@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from start_screen1 import *
 from SaveInformation_screen import *
-from class_screen import *
+
 form_class = uic.loadUiType("first_screen.ui")[0]
 
 
@@ -20,7 +20,6 @@ class WindowClass(QMainWindow, form_class):
         self.hide()  # 메인 윈도우 숨김
         self.start_screen1 = start_screen1()
         self.start_screen1.exec()  # 두번째창 닫을때까지 기다림
-        self.show()  # 두번째창 닫으면 다시 첫 번째 창 보여 짐
 
     def continueButton(self):
         self.hide()  # 메인 윈도우 숨김

@@ -37,7 +37,6 @@ class SaveInformation_screen(QDialog,QWidget, form_SaveInformationScreen):
         id = data['id'][0]
         cl = data['cl'][0]
         grade = data['grade'][0]
-        print('hi')
         print(name, id, cl, grade)
         self.Data1_name.setText(str(name))
         self.Data1_ID.setText(str(id))

@@ -6,6 +6,7 @@ from PyQt5 import uic
 from PyQt5.QtGui import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 import pathlib
+from basic_screen import basic_screen
 import pandas as pd
 
 form_class=uic.loadUiType("start_first.ui")[0]
@@ -37,6 +38,8 @@ class start_screen1(QDialog,QWidget, form_class):
                   encoding='utf-8-sig')
 
         print(name, id, cl)
+        self.hide()
+        self.basic_screen= basic_screen()
 
 
     def timeButton(self):

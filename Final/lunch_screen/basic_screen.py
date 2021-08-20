@@ -81,7 +81,8 @@ class WindowClass(QMainWindow, form_class):
 
     def saveButton(self):
         print("save")
-        pathpath = str(pathlib.Path(__file__).parent.absolute())+"/basic_screen.py"
+        pathpath = str(pathlib.Path(__file__).parent.absolute())+"\\"+"basic_screen.py"
+        print(pathpath)
         info = pd.read_csv("../info1.csv") # , index_col='Date'
 
         new_info = info.copy()
@@ -172,9 +173,3 @@ class WindowClass(QMainWindow, form_class):
         self.img_label.setPixmap(pixmap.scaled(self.img_label.size(), QtCore.Qt.IgnoreAspectRatio))
         self.show()
         self.condition()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    myWindow = WindowClass()
-    myWindow.show()
-    app.exec_()
