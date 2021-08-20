@@ -121,11 +121,16 @@
    <widget class="QLabel" name="chat">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>380</y>
-      <width>691</width>
+      <x>30</x>
+      <y>400</y>
+      <width>741</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -138,6 +143,12 @@
     </property>
     <property name="text">
      <string>집에 갈 시간이다. 어떻게 갈까?</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QGroupBox" name="goHomeMenu">
@@ -222,8 +233,8 @@
    <widget class="QPushButton" name="nextButton">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>510</y>
+      <x>700</x>
+      <y>530</y>
       <width>61</width>
       <height>28</height>
      </rect>
@@ -235,8 +246,8 @@
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>510</y>
+      <x>700</x>
+      <y>530</y>
       <width>61</width>
       <height>28</height>
      </rect>
@@ -245,6 +256,31 @@
      <string>이전</string>
     </property>
    </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HY신명조</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>imageLabel</zorder>
+   <zorder>menu</zorder>
+   <zorder>menuBox</zorder>
+   <zorder>chat</zorder>
+   <zorder>goHomeMenu</zorder>
+   <zorder>nextButton</zorder>
+   <zorder>backButton</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

@@ -33,7 +33,7 @@
       <x>10</x>
       <y>80</y>
       <width>111</width>
-      <height>241</height>
+      <height>251</height>
      </rect>
     </property>
     <property name="title">
@@ -121,11 +121,16 @@
    <widget class="QLabel" name="chat">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>380</y>
-      <width>691</width>
+      <x>30</x>
+      <y>400</y>
+      <width>741</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -204,9 +209,9 @@
    <widget class="QLabel" name="mission_show">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>530</x>
       <y>20</y>
-      <width>201</width>
+      <width>251</width>
       <height>21</height>
      </rect>
     </property>
@@ -226,8 +231,8 @@
    <widget class="QPushButton" name="next">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>510</y>
+      <x>680</x>
+      <y>530</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -239,8 +244,8 @@
    <widget class="QPushButton" name="go">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>510</y>
+      <x>680</x>
+      <y>530</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -252,10 +257,10 @@
    <widget class="QLabel" name="imageLabel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>50</y>
-      <width>651</width>
-      <height>311</height>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="text">
@@ -314,6 +319,18 @@
      <string>지도 닫기</string>
     </property>
    </widget>
+   <zorder>imageLabel</zorder>
+   <zorder>menu</zorder>
+   <zorder>menuBox</zorder>
+   <zorder>chat</zorder>
+   <zorder>missionBox</zorder>
+   <zorder>mission_show</zorder>
+   <zorder>next</zorder>
+   <zorder>go</zorder>
+   <zorder>front</zorder>
+   <zorder>left</zorder>
+   <zorder>right</zorder>
+   <zorder>mapclose</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

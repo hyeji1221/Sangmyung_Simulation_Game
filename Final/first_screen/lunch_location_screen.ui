@@ -34,6 +34,13 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="text">
      <string>지도</string>
     </property>
@@ -113,6 +120,12 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="text">
     <string>메뉴</string>
    </property>
@@ -120,11 +133,16 @@
   <widget class="QLabel" name="chat">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>380</y>
-     <width>691</width>
+     <x>30</x>
+     <y>400</y>
+     <width>741</width>
      <height>171</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="frameShape">
     <enum>QFrame::Box</enum>
@@ -142,9 +160,9 @@
   <widget class="QLabel" name="imageLabel">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>0</x>
      <y>10</y>
-     <width>651</width>
+     <width>801</width>
      <height>361</height>
     </rect>
    </property>
@@ -155,8 +173,8 @@
   <widget class="QPushButton" name="upButton">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>240</y>
+     <x>380</x>
+     <y>250</y>
      <width>51</width>
      <height>51</height>
     </rect>
@@ -168,8 +186,8 @@
   <widget class="QPushButton" name="rightButton">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>290</y>
+     <x>430</x>
+     <y>300</y>
      <width>51</width>
      <height>51</height>
     </rect>
@@ -181,8 +199,8 @@
   <widget class="QPushButton" name="leftButton">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>290</y>
+     <x>330</x>
+     <y>300</y>
      <width>51</width>
      <height>51</height>
     </rect>
@@ -194,8 +212,8 @@
   <widget class="QPushButton" name="finishButton">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>510</y>
+     <x>700</x>
+     <y>530</y>
      <width>61</width>
      <height>28</height>
     </rect>

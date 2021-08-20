@@ -33,7 +33,7 @@
       <x>10</x>
       <y>80</y>
       <width>111</width>
-      <height>241</height>
+      <height>251</height>
      </rect>
     </property>
     <property name="title">
@@ -121,11 +121,16 @@
    <widget class="QLabel" name="chat">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>380</y>
-      <width>691</width>
+      <x>30</x>
+      <y>400</y>
+      <width>741</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -143,10 +148,10 @@
    <widget class="QLabel" name="img_label">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>20</y>
-      <width>631</width>
-      <height>351</height>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="text">
@@ -204,7 +209,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>480</y>
+      <y>495</y>
       <width>281</width>
       <height>31</height>
      </rect>
@@ -214,7 +219,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>480</y>
+      <y>495</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -273,7 +278,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>495</y>
+      <y>510</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -282,6 +287,17 @@
      <string>확인</string>
     </property>
    </widget>
+   <zorder>img_label</zorder>
+   <zorder>menu</zorder>
+   <zorder>menuBox</zorder>
+   <zorder>chat</zorder>
+   <zorder>upBtn</zorder>
+   <zorder>downBtn</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>goBtn</zorder>
+   <zorder>rightBtn</zorder>
+   <zorder>leftBtn</zorder>
+   <zorder>finishBtn</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
