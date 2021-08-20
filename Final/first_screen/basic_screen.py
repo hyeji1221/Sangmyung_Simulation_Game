@@ -174,3 +174,9 @@ class basic_screen(QMainWindow, form_class):
         self.img_label.setPixmap(pixmap.scaled(self.img_label.size(), QtCore.Qt.IgnoreAspectRatio))
         self.show()
         self.condition()
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWindow = basic_screen()
+    myWindow.show()
+    app.exec_()
