@@ -17,6 +17,9 @@ class start_screen1(QDialog,QWidget, form_class):
         super().__init__()
         self.setupUi(self)
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)

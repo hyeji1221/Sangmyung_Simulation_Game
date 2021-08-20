@@ -16,6 +16,9 @@ class WindowClass(QMainWindow):
         super().__init__()
         loadUi("mission.ui", self)
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)
@@ -164,6 +167,9 @@ class LibraryClass(QMainWindow):
         super().__init__()
         loadUi("library.ui", self)
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)
@@ -200,6 +206,9 @@ class StudentClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("student.ui",self)
+
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
 
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
@@ -279,6 +288,9 @@ class PrintClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("print.ui",self)
+
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
 
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))

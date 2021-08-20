@@ -15,6 +15,9 @@ class WindowClass(QMainWindow, form_class):
         self.goHomeMenu.hide()
         self.backButton.hide()
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         self.pixmap = QImage("busStop_Image.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
 

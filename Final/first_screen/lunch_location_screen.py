@@ -16,6 +16,9 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.setupUi(self)
         self.show()  # 두번째 ui창을 띄우기
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)

@@ -19,6 +19,9 @@ class basic_screen(QMainWindow, form_class):
         #self.show_image()
         self.show()
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)

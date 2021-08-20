@@ -15,6 +15,9 @@ class goingHome_screen(QMainWindow, form_class):
         self.setupUi(self)
         self.show()
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)

@@ -17,9 +17,35 @@ class SaveInformation_screen(QDialog,QWidget, form_SaveInformationScreen):
         self.setupUi(self)
         self.show()
 
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.cancelButton.clicked.connect(self.Home)
         self.data1Start.clicked.connect(self.dataStart)
         self.dataset()
+
+        # 스타일 변경------------------------------------------------
+        self.cancelButton.setStyleSheet("background-color: #DFECFF")
+        self.data1Start.setStyleSheet("background-color: #B6D0F7")
+        self.Data1_deleteButton.setStyleSheet("background-color: #DFECFF")
+        self.Data1_infoChangeButton.setStyleSheet("background-color: #DFECFF")
+
+        self.Data2_startButton.setStyleSheet("background-color: #B6D0F7")
+        self.Data2_deleteButton.setStyleSheet("background-color: #DFECFF")
+        self.Data2_infoChangeButton.setStyleSheet("background-color: #DFECFF")
+
+        self.Data3_startButton.setStyleSheet("background-color: #B6D0F7")
+        self.Data3_deleteButton.setStyleSheet("background-color: #DFECFF")
+        self.Data3_infoChangeButton.setStyleSheet("background-color: #DFECFF")
+
+        self.Data1.setStyleSheet("background-color: rgb(255,255,255)")
+        self.Data2.setStyleSheet("background-color: rgb(255,255,255)")
+        self.Data3.setStyleSheet("background-color: rgb(255,255,255)")
 
     def Home(self):
         self.close()  # 창 닫기
