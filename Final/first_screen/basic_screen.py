@@ -18,6 +18,12 @@ class basic_screen(QMainWindow, form_class):
         self.setupUi(self)
         #self.show_image()
         self.show()
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.menuBox.hide()
         self.textEdit.hide()
         self.finishBtn.hide()
@@ -35,6 +41,24 @@ class basic_screen(QMainWindow, form_class):
         self.goBtn.clicked.connect(self.go_btn)
         self.finishBtn.clicked.connect(self.finish_btn)
         self.number = 0
+
+        # 스타일 변경------------------------------------------------
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.upBtn.setStyleSheet("background-color: #DFECFF")
+        self.leftBtn.setStyleSheet("background-color: #DFECFF")
+        self.rightBtn.setStyleSheet("background-color: #DFECFF")
+        self.downBtn.setStyleSheet("background-color: #DFECFF")
+        self.goBtn.setStyleSheet("background-color: #DFECFF")
+        self.finishBtn.setStyleSheet("background-color: #DFECFF")
+
 
     def start(self):
         self.chat.setText("    강의실을 입력하세요.")

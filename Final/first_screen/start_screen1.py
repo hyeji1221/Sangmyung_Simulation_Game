@@ -17,10 +17,24 @@ class start_screen1(QDialog,QWidget, form_class):
         super().__init__()
         self.setupUi(self)
 
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.start_btn.clicked.connect(self.startButton)
         self.time_btn.clicked.connect(self.timeButton)
         self.cancel_btn.clicked.connect(self.cancelBtn)
         self.file=""
+
+        # 스타일 변경------------------------------------------------
+        self.start_btn.setStyleSheet("background-color: #DFECFF")
+        self.cancel_btn.setStyleSheet("background-color: #DFECFF")
+        self.time_btn.setStyleSheet("background-color: #B6D0F7")
+        self.name.setStyleSheet("background-color: rgb(255,255,255)")
+        self.id.setStyleSheet("background-color: rgb(255,255,255)")
+        self.major.setStyleSheet("background-color: rgb(255,255,255)")
+        self.grade.setStyleSheet("background-color: rgb(255,255,255)")
 
 
     def cancelBtn(self):

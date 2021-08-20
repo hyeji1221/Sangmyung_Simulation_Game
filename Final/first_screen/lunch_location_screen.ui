@@ -154,7 +154,8 @@
     <number>3</number>
    </property>
    <property name="text">
-    <string>&quot;부대통령 뚝배기&quot;를 찾으러 가볼까?</string>
+    <string>현재 위치는 '미래백년관'이다.
+&quot;부대통령 뚝배기&quot;를 찾으러 가볼까?</string>
    </property>
   </widget>
   <widget class="QLabel" name="imageLabel">
@@ -212,9 +213,9 @@
   <widget class="QPushButton" name="finishButton">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>680</x>
      <y>530</y>
-     <width>61</width>
+     <width>81</width>
      <height>28</height>
     </rect>
    </property>

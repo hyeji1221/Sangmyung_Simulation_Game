@@ -127,6 +127,11 @@
       <height>171</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
@@ -214,45 +219,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="left">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>258</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="right">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>258</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="front">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>50</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="missionBox">
     <property name="geometry">
      <rect>
@@ -262,6 +228,12 @@
       <height>171</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
      <string>Tip!</string>
     </property>
@@ -270,9 +242,15 @@
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>331</width>
+       <width>341</width>
        <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
      <property name="frameShape">
       <enum>QFrame::Box</enum>
@@ -287,20 +265,68 @@
       <string>학생증은 학생회관에서 발급받을 수 있다!
 또는 모바일 학생증으로 사용 할 수 있다!</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QPushButton" name="OK">
      <property name="geometry">
       <rect>
-       <x>150</x>
+       <x>160</x>
        <y>120</y>
        <width>75</width>
        <height>23</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="text">
       <string>확인</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="left">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="front">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Up</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="right">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right</string>
+    </property>
    </widget>
    <zorder>imageLabel</zorder>
    <zorder>menu</zorder>
@@ -310,10 +336,10 @@
    <zorder>next</zorder>
    <zorder>go</zorder>
    <zorder>go_2</zorder>
-   <zorder>left</zorder>
-   <zorder>right</zorder>
-   <zorder>front</zorder>
    <zorder>missionBox</zorder>
+   <zorder>left</zorder>
+   <zorder>front</zorder>
+   <zorder>right</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

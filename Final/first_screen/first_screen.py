@@ -12,9 +12,21 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.init.clicked.connect(self.initButton)
         self.continue_2.clicked.connect(self.continueButton)
         self.exit.clicked.connect(QCoreApplication.instance().quit)
+
+        # 스타일 변경------------------------------------------------
+        self.init.setStyleSheet("background-color: #DFECFF")
+        self.continue_2.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+
 
     def initButton(self):
         self.hide()  # 메인 윈도우 숨김

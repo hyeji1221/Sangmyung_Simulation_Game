@@ -142,15 +142,16 @@
      <number>3</number>
     </property>
     <property name="text">
-     <string>벌써 점심시간이다. 점심먹으러 어디갈까?</string>
+     <string>수업이 끝났다.
+벌써 점심시간인데 점심먹으러 어디갈까?</string>
     </property>
    </widget>
    <widget class="QPushButton" name="nextButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>680</x>
       <y>530</y>
-      <width>61</width>
+      <width>81</width>
       <height>28</height>
      </rect>
     </property>
@@ -767,9 +768,9 @@
    <widget class="QPushButton" name="nextButton2">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>680</x>
       <y>530</y>
-      <width>61</width>
+      <width>81</width>
       <height>28</height>
      </rect>
     </property>
@@ -777,6 +778,33 @@
      <string>다음</string>
     </property>
    </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>imageLabel</zorder>
+   <zorder>menu</zorder>
+   <zorder>menuBox</zorder>
+   <zorder>chat</zorder>
+   <zorder>nextButton</zorder>
+   <zorder>hillBox</zorder>
+   <zorder>hillUpMenuBox</zorder>
+   <zorder>hillMenuOptionBox</zorder>
+   <zorder>hillDownMenuBox</zorder>
+   <zorder>hillMenuBox1</zorder>
+   <zorder>hillMenuBox2</zorder>
+   <zorder>hillMenuBox3</zorder>
+   <zorder>hillMenuBox4</zorder>
+   <zorder>nextButton2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

@@ -161,14 +161,14 @@
    <widget class="QPushButton" name="upBtn">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>140</y>
+      <x>380</x>
+      <y>250</y>
       <width>50</width>
-      <height>60</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Up</string>
     </property>
     <property name="icon">
      <iconset>
@@ -184,14 +184,14 @@
    <widget class="QPushButton" name="downBtn">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>250</y>
+      <x>380</x>
+      <y>310</y>
       <width>50</width>
-      <height>60</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Down</string>
     </property>
     <property name="icon">
      <iconset>
@@ -208,8 +208,8 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>495</y>
+      <x>50</x>
+      <y>510</y>
       <width>281</width>
       <height>31</height>
      </rect>
@@ -218,8 +218,8 @@
    <widget class="QPushButton" name="goBtn">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>495</y>
+      <x>340</x>
+      <y>510</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -231,14 +231,14 @@
    <widget class="QPushButton" name="rightBtn">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>200</y>
-      <width>60</width>
+      <x>430</x>
+      <y>300</y>
+      <width>51</width>
       <height>50</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Right</string>
     </property>
     <property name="icon">
      <iconset>
@@ -255,13 +255,13 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>200</y>
-      <width>60</width>
+      <y>300</y>
+      <width>51</width>
       <height>50</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Left</string>
     </property>
     <property name="icon">
      <iconset>

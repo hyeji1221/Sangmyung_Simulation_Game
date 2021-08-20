@@ -15,6 +15,12 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         super().__init__()
         self.setupUi(self)
         self.show()  # 두번째 ui창을 띄우기
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.menuBox.hide()
         self.finishButton.hide()
 
@@ -30,13 +36,19 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.menu.clicked.connect(self.slot_toggle)
 
         # 스타일 변경-------------------------------------------------------
-        self.menuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
-        self.map.setStyleSheet("background-color: rgb(225)")
-        self.mission.setStyleSheet("background-color: rgb(225)")
-        self.time.setStyleSheet("background-color: rgb(225)")
-        self.save.setStyleSheet("background-color: rgb(225)")
-        self.out_btn.setStyleSheet("background-color: rgb(225)")
-        self.exit.setStyleSheet("background-color: rgb(225)")
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.finishButton.setStyleSheet("background-color: #DFECFF")
+        self.leftButton.setStyleSheet("background-color: #FAFCFF")
+        self.rightButton.setStyleSheet("background-color: #FAFCFF")
+        self.upButton.setStyleSheet("background-color: #FAFCFF")
 
     def selectUp(self):
         self.move(1)
@@ -104,6 +116,9 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         elif self.pixmap==QImage("location8.jpg").scaled(801, 361):
             if condition==3:
                 self.finishButton.show()
+                self.upButton.hide()
+                self.leftButton.hide()
+                self.rightButton.hide()
                 self.pixmap = QImage("location9.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("목적지에 도착했다!")

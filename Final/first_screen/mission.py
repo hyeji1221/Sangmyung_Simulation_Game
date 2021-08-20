@@ -15,6 +15,12 @@ class WindowClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("mission.ui", self)
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.show()
         self.menuBox.hide()
         self.missionBox.hide()
@@ -26,15 +32,37 @@ class WindowClass(QMainWindow):
         self.next.hide()
         self.go.hide()
         self.mapclose.hide()
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
-        self.left.setIcon(QtGui.QIcon('left.png'))
-        self.left.setIconSize(QtCore.QSize(75, 71))
-        self.right.setIcon(QtGui.QIcon('right.png'))
-        self.right.setIconSize(QtCore.QSize(75, 71))
+        # self.front.setIcon(QtGui.QIcon('front.png'))
+        # self.front.setIconSize(QtCore.QSize(75, 71))
+        # self.left.setIcon(QtGui.QIcon('left.png'))
+        # self.left.setIconSize(QtCore.QSize(75, 71))
+        # self.right.setIcon(QtGui.QIcon('right.png'))
+        # self.right.setIconSize(QtCore.QSize(75, 71))
         self.chat.setText("미션이 도착했습니다. 확인해보세요!")
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
+
+
+
+        # 스타일 변경------------------------------------------------
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.missionBox.setStyleSheet("background-color: rgb(255,255,255)")
+        self.OK.setStyleSheet("background-color: #DFECFF")
+        self.Yes.setStyleSheet("background-color: #DFECFF")
+        self.mission_show.setStyleSheet("background-color: rgb(238,239,254,200)")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.go.setStyleSheet("background-color: #DFECFF")
+        self.next.setStyleSheet("background-color: #DFECFF")
+        self.front.setStyleSheet("background-color: #FAFCFF")
+        self.left.setStyleSheet("background-color: #FAFCFF")
+        self.right.setStyleSheet("background-color: #FAFCFF")
 
     def slot_toggle(self):
         if self.menu.isChecked():
@@ -135,13 +163,34 @@ class LibraryClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("library.ui", self)
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.menuBox.hide()
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
+        # self.front.setIcon(QtGui.QIcon('front.png'))
+        # self.front.setIconSize(QtCore.QSize(75, 71))
         self.pixmap = QImage("li_2.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("안으로 들어가자.")
         self.front.clicked.connect(self.frontButton)
+
+        # 스타일 변경------------------------------------------------
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.mission_show.setStyleSheet("background-color: rgb(238,239,254,200)")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.front.setStyleSheet("background-color: #FAFCFF")
+        self.left.setStyleSheet("background-color: #FAFCFF")
+        self.right.setStyleSheet("background-color: #FAFCFF")
 
 
     def frontButton(self):
@@ -151,6 +200,12 @@ class StudentClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("student.ui",self)
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.pixmap = QImage("li_3.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.missionBox.hide()
@@ -161,14 +216,34 @@ class StudentClass(QMainWindow):
         self.front.hide()
         self.left.hide()
         self.right.hide()
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
-        self.left.setIcon(QtGui.QIcon('left.png'))
-        self.left.setIconSize(QtCore.QSize(75, 71))
-        self.right.setIcon(QtGui.QIcon('right.png'))
-        self.right.setIconSize(QtCore.QSize(75, 71))
+        # self.front.setIcon(QtGui.QIcon('front.png'))
+        # self.front.setIconSize(QtCore.QSize(75, 71))
+        # self.left.setIcon(QtGui.QIcon('left.png'))
+        # self.left.setIconSize(QtCore.QSize(75, 71))
+        # self.right.setIcon(QtGui.QIcon('right.png'))
+        # self.right.setIconSize(QtCore.QSize(75, 71))
         self.next.clicked.connect(self.NextButton)
         self.OK.clicked.connect(self.OKButton)
+
+        # 스타일 변경------------------------------------------------
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.mission_show.setStyleSheet("background-color: rgb(238,239,254,200)")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.front.setStyleSheet("background-color: #FAFCFF")
+        self.left.setStyleSheet("background-color: #FAFCFF")
+        self.right.setStyleSheet("background-color: #FAFCFF")
+        self.go.setStyleSheet("background-color: #DFECFF")
+        self.go_2.setStyleSheet("background-color: #DFECFF")
+        self.next.setStyleSheet("background-color: #DFECFF")
+        self.missionBox.setStyleSheet("background-color: rgb(255,255,255,200)")
+        self.OK.setStyleSheet("background-color: #DFECFF")
 
     def NextButton(self):
         self.missionBox.show()
@@ -204,6 +279,12 @@ class PrintClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("print.ui",self)
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.menuBox.hide()
         self.com.hide()
         self.mission_show.hide()
@@ -212,14 +293,35 @@ class PrintClass(QMainWindow):
         self.left.hide()
         self.right.hide()
         self.go.hide()
-        self.front.setIcon(QtGui.QIcon('front.png'))
-        self.front.setIconSize(QtCore.QSize(75, 71))
-        self.left.setIcon(QtGui.QIcon('left.png'))
-        self.left.setIconSize(QtCore.QSize(75, 71))
-        self.right.setIcon(QtGui.QIcon('right.png'))
-        self.right.setIconSize(QtCore.QSize(75, 71))
+        # self.front.setIcon(QtGui.QIcon('front.png'))
+        # self.front.setIconSize(QtCore.QSize(75, 71))
+        # self.left.setIcon(QtGui.QIcon('left.png'))
+        # self.left.setIconSize(QtCore.QSize(75, 71))
+        # self.right.setIcon(QtGui.QIcon('right.png'))
+        # self.right.setIconSize(QtCore.QSize(75, 71))
         self.chat.setText("계속 찾아보자.")
         self.next.clicked.connect(self.nextButton)
+
+        # 스타일 변경------------------------------------------------
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.mission_show.setStyleSheet("background-color: rgb(238,239,254,200)")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.front.setStyleSheet("background-color: #FAFCFF")
+        self.left.setStyleSheet("background-color: #FAFCFF")
+        self.right.setStyleSheet("background-color: #FAFCFF")
+        self.go.setStyleSheet("background-color: #DFECFF")
+        self.next.setStyleSheet("background-color: #DFECFF")
+        self.missionBox.setStyleSheet("background-color: rgb(255,255,255,200)")
+        self.OK.setStyleSheet("background-color: #DFECFF")
+        self.com.setStyleSheet("background-color: #DFECFF")
+
     def nextButton(self):
         self.pixmap = QImage("li_5.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
@@ -252,6 +354,8 @@ class PrintClass(QMainWindow):
     def comButton(self):
         self.mission_show.hide()
         self.missionBox.show()
+        self.com.hide()
+        self.next.hide()
         self.OK.clicked.connect(self.OKButton)
     def OKButton(self):
         self.hide()
@@ -267,6 +371,7 @@ class Mission(QDialog,QWidget):
         libraryWindow = LibraryClass()
         studentWindow = StudentClass()
         printWindow = PrintClass()
+
 
         widget.addWidget(myWindow)
         widget.addWidget(libraryWindow)

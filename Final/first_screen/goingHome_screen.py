@@ -14,6 +14,12 @@ class goingHome_screen(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.show()
+
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(242, 245, 253))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
         self.menuBox.hide()
         self.goHomeMenu.hide()
         self.backButton.hide()
@@ -28,18 +34,23 @@ class goingHome_screen(QMainWindow, form_class):
         self.backButton.clicked.connect(self.goBack)
 
         # 스타일 변경------------------------------------------------
-        self.menuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
-        self.map.setStyleSheet("background-color: rgb(225)")
-        self.mission.setStyleSheet("background-color: rgb(225)")
-        self.time.setStyleSheet("background-color: rgb(225)")
-        self.save.setStyleSheet("background-color: rgb(225)")
-        self.out_btn.setStyleSheet("background-color: rgb(225)")
-        self.exit.setStyleSheet("background-color: rgb(225)")
-        self.goHomeMenu.setStyleSheet("background-color: rgb(246,246,246,130)")
-        self.bus7016.setStyleSheet("background-color: rgb(225)")
-        self.bus13.setStyleSheet("background-color: rgb(225)")
-        self.bus08.setStyleSheet("background-color: rgb(225)")
-        self.goHillDown.setStyleSheet("background-color: rgb(225)")
+        self.menu.setStyleSheet("background-color: #DFECFF")
+        self.menuBox.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.map.setStyleSheet("background-color: #DFECFF")
+        self.mission.setStyleSheet("background-color: #DFECFF")
+        self.time.setStyleSheet("background-color: #DFECFF")
+        self.save.setStyleSheet("background-color: #DFECFF")
+        self.out_btn.setStyleSheet("background-color: #DFECFF")
+        self.exit.setStyleSheet("background-color: #DFECFF")
+        self.chat.setStyleSheet("background-color: rgb(255,255,255)")
+        self.backButton.setStyleSheet("background-color: #DFECFF")
+        self.nextButton.setStyleSheet("background-color: #DFECFF")
+
+        self.goHomeMenu.setStyleSheet("background-color: rgb(255,255,255,150)")
+        self.bus7016.setStyleSheet("background-color: #DFECFF")
+        self.bus13.setStyleSheet("background-color: #DFECFF")
+        self.bus08.setStyleSheet("background-color: #DFECFF")
+        self.goHillDown.setStyleSheet("background-color: #DFECFF")
 
     def goBack(self):
         self.selectGoHome()

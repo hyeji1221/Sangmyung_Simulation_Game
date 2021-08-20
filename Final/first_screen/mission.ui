@@ -148,11 +148,17 @@
    <widget class="QGroupBox" name="missionBox">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>120</y>
+      <x>210</x>
+      <y>130</y>
       <width>401</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="title">
      <string>미션!</string>
@@ -162,9 +168,15 @@
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>331</width>
+       <width>341</width>
        <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
      <property name="frameShape">
       <enum>QFrame::Box</enum>
@@ -178,15 +190,24 @@
      <property name="text">
       <string>도서관에 가서 프린터기를 찾으세요</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QPushButton" name="OK">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>100</x>
        <y>120</y>
        <width>75</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
      <property name="text">
       <string>확인</string>
@@ -195,11 +216,17 @@
     <widget class="QPushButton" name="Yes">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>220</x>
        <y>120</y>
        <width>75</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
      <property name="text">
       <string>예</string>
@@ -267,49 +294,10 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="front">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>52</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="left">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>260</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="right">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>260</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="mapclose">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>370</x>
       <y>340</y>
       <width>75</width>
       <height>23</height>
@@ -317,6 +305,45 @@
     </property>
     <property name="text">
      <string>지도 닫기</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="right">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="left">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="front">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Up</string>
     </property>
    </widget>
    <zorder>imageLabel</zorder>
@@ -327,10 +354,10 @@
    <zorder>mission_show</zorder>
    <zorder>next</zorder>
    <zorder>go</zorder>
-   <zorder>front</zorder>
-   <zorder>left</zorder>
-   <zorder>right</zorder>
    <zorder>mapclose</zorder>
+   <zorder>right</zorder>
+   <zorder>left</zorder>
+   <zorder>front</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

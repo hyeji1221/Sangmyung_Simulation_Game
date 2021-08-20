@@ -183,14 +183,40 @@
    <widget class="QPushButton" name="front">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>50</y>
-      <width>75</width>
-      <height>71</height>
+      <x>380</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Up</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="left">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="right">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>300</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right</string>
     </property>
    </widget>
    <zorder>imageLabel</zorder>
@@ -199,6 +225,8 @@
    <zorder>chat</zorder>
    <zorder>mission_show</zorder>
    <zorder>front</zorder>
+   <zorder>left</zorder>
+   <zorder>right</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
