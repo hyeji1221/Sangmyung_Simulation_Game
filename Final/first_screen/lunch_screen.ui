@@ -121,11 +121,16 @@
    <widget class="QLabel" name="chat">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>30</x>
       <y>400</y>
-      <width>691</width>
+      <width>741</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -143,7 +148,7 @@
    <widget class="QPushButton" name="nextButton">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>700</x>
       <y>530</y>
       <width>61</width>
       <height>28</height>
@@ -762,7 +767,7 @@
    <widget class="QPushButton" name="nextButton2">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>700</x>
       <y>530</y>
       <width>61</width>
       <height>28</height>

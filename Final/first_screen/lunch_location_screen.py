@@ -19,7 +19,7 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.finishButton.hide()
 
         self.condition=0
-        self.pixmap = QImage("location1.jpg").scaled(651, 361)
+        self.pixmap = QImage("location1.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
 
         self.upButton.clicked.connect(self.selectUp)
@@ -29,6 +29,15 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.menu.setCheckable(True)
         self.menu.clicked.connect(self.slot_toggle)
 
+        # 스타일 변경-------------------------------------------------------
+        self.menuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.map.setStyleSheet("background-color: rgb(225)")
+        self.mission.setStyleSheet("background-color: rgb(225)")
+        self.time.setStyleSheet("background-color: rgb(225)")
+        self.save.setStyleSheet("background-color: rgb(225)")
+        self.out_btn.setStyleSheet("background-color: rgb(225)")
+        self.exit.setStyleSheet("background-color: rgb(225)")
+
     def selectUp(self):
         self.move(1)
     def selectLeft(self):
@@ -37,65 +46,65 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
         self.move(3)
 
     def move(self, condition):
-        if self.pixmap==QImage("location1.jpg").scaled(651, 361):
+        if self.pixmap==QImage("location1.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location2.jpg").scaled(651, 361)
+                self.pixmap = QImage("location2.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location2.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location2.jpg").scaled(801, 361):
             if condition==2:
-                self.pixmap = QImage("location3.jpg").scaled(651, 361)
+                self.pixmap = QImage("location3.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location3.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location3.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location4.jpg").scaled(651, 361)
+                self.pixmap = QImage("location4.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location4.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location4.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location5.jpg").scaled(651, 361)
+                self.pixmap = QImage("location5.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location5.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location5.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location6.jpg").scaled(651, 361)
+                self.pixmap = QImage("location6.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location6.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location6.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location7.jpg").scaled(651, 361)
+                self.pixmap = QImage("location7.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
 
-        elif self.pixmap==QImage("location7.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location7.jpg").scaled(801, 361):
             if condition==1:
-                self.pixmap = QImage("location8.jpg").scaled(651, 361)
+                self.pixmap = QImage("location8.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("이 방향으로 가면 도착지와 가까워질 것 같다")
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")
-        elif self.pixmap==QImage("location8.jpg").scaled(651, 361):
+        elif self.pixmap==QImage("location8.jpg").scaled(801, 361):
             if condition==3:
                 self.finishButton.show()
-                self.pixmap = QImage("location9.jpg").scaled(651, 361)
+                self.pixmap = QImage("location9.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
                 self.chat.setText("목적지에 도착했다!")
                 self.finishButton.clicked.connect(self.nextscreen)

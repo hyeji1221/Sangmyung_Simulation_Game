@@ -54,7 +54,7 @@ class WindowClass(QMainWindow):
 
     def mapButton(self):
         self.imageLabel.show()
-        self.pixmap = QImage("map.jpg").scaled(651, 361)
+        self.pixmap = QImage("map.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.mapclose.show()
         self.mapclose.clicked.connect(self.mapcloseButton)
@@ -98,7 +98,7 @@ class WindowClass(QMainWindow):
 
     def nexButton(self):
         self.imageLabel.show()
-        self.pixmap = QImage("li_1.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_1.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("도서관을 찾으러 갑시다.")
         self.next.hide()
@@ -138,7 +138,7 @@ class LibraryClass(QMainWindow):
         self.menuBox.hide()
         self.front.setIcon(QtGui.QIcon('front.png'))
         self.front.setIconSize(QtCore.QSize(75, 71))
-        self.pixmap = QImage("li_2.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_2.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.chat.setText("안으로 들어가자.")
         self.front.clicked.connect(self.frontButton)
@@ -151,7 +151,7 @@ class StudentClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("student.ui",self)
-        self.pixmap = QImage("li_3.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_3.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.missionBox.hide()
         self.menuBox.hide()
@@ -179,7 +179,7 @@ class StudentClass(QMainWindow):
         self.go.show()
         self.go.clicked.connect(self.GoButton)
     def GoButton(self):
-        self.pixmap = QImage("li_4.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_4.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.show()
         self.left.show()
@@ -221,7 +221,7 @@ class PrintClass(QMainWindow):
         self.chat.setText("계속 찾아보자.")
         self.next.clicked.connect(self.nextButton)
     def nextButton(self):
-        self.pixmap = QImage("li_5.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_5.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.show()
         self.left.show()
@@ -240,7 +240,7 @@ class PrintClass(QMainWindow):
         self.chat.setText("여긴 아닌 것 같다.")
         self.go.hide()
     def GoButton(self):
-        self.pixmap = QImage("li_7.jpg").scaled(651, 361)
+        self.pixmap = QImage("li_7.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
         self.front.hide()
         self.left.hide()

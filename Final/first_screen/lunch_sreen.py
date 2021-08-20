@@ -31,6 +31,54 @@ class lunch_screen(QMainWindow, form_class):
 
         self.nextButton.clicked.connect(self.selectStart)
 
+        # 스타일 변경------------------------------------------------
+        self.menuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.map.setStyleSheet("background-color: rgb(225)")
+        self.mission.setStyleSheet("background-color: rgb(225)")
+        self.time.setStyleSheet("background-color: rgb(225)")
+        self.save.setStyleSheet("background-color: rgb(225)")
+        self.out_btn.setStyleSheet("background-color: rgb(225)")
+        self.exit.setStyleSheet("background-color: rgb(225)")
+
+        self.hillBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillDownMenuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillMenuBox1.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillMenuBox2.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillMenuBox3.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillMenuBox4.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillMenuOptionBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillUpMenuBox.setStyleSheet("background-color: rgb(246,246,246,130)")
+        self.hillButton.setStyleSheet("background-color: rgb(225)")
+        self.hillDownButton.setStyleSheet("background-color: rgb(225)")
+        self.hillUpButton.setStyleSheet("background-color: rgb(225)")
+        self.hillDownMenu1.setStyleSheet("background-color: rgb(225)")
+        self.hillDownMenu2.setStyleSheet("background-color: rgb(225)")
+        self.hillDownMenu3.setStyleSheet("background-color: rgb(225)")
+        self.hillDownMenu4.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu1_1.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu1_2.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu1_3.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu1_4.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu2_1.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu2_2.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu2_3.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu2_4.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu3_1.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu3_2.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu3_3.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu4_1.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu4_2.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu4_3.setStyleSheet("background-color: rgb(225)")
+        self.hillMenu4_4.setStyleSheet("background-color: rgb(225)")
+        self.hillMenuOption1.setStyleSheet("background-color: rgb(225)")
+        self.hillMenuOption2.setStyleSheet("background-color: rgb(225)")
+        self.hillMenuOption3.setStyleSheet("background-color: rgb(225)")
+        self.hillMenuOption4.setStyleSheet("background-color: rgb(225)")
+        self.hillUpMenu1.setStyleSheet("background-color: rgb(225)")
+        self.hillUpMenu2.setStyleSheet("background-color: rgb(225)")
+        self.hillUpMenu3.setStyleSheet("background-color: rgb(225)")
+        self.hillUpMenu4.setStyleSheet("background-color: rgb(225)")
+
     def selectStart(self):
         self.hillBox.show()
         self.nextButton.hide()
@@ -70,15 +118,23 @@ class lunch_screen(QMainWindow, form_class):
     def selectHillUpMenu1(self):
         self.hillUpMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 위에 있는 안다미로!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillUpMenu2(self):
         self.hillUpMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 위에 있는 학생식당!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillUpMenu3(self):
         self.hillUpMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 위에 있는 블루포트!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillUpMenu4(self):
         self.hillUpMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 위에 있는 무아타!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
 
     def selectHillMenuOption1(self):
@@ -112,6 +168,8 @@ class lunch_screen(QMainWindow, form_class):
     def selectHillMenu1_1(self):
         self.hillMenuBox1.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 The함께식탁!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu1_2(self):
         self.hillMenuBox1.hide()
         self.nextButton2.show()
@@ -120,59 +178,93 @@ class lunch_screen(QMainWindow, form_class):
     def selectHillMenu1_3(self):
         self.hillMenuBox1.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 치즈밥있슈!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu1_4(self):
         self.hillMenuBox1.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 청와설렁탕!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
     def selectHillMenu2_1(self):
         self.hillMenuBox2.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 봉구스밥버거!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu2_2(self):
         self.hillMenuBox2.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 빨간계단!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu2_3(self):
         self.hillMenuBox2.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 윤가네!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu2_4(self):
         self.hillMenuBox2.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 신전떡볶이!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
     def selectHillMenu3_1(self):
         self.hillMenuBox3.hide()
         self.chat.setText("점심 장소는 \"언덕에 있-는 멜팅그릴!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu3_2(self):
         self.hillMenuBox3.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 샌드앤닭!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu3_3(self):
         self.hillMenuBox3.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 파파존스!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
     def selectHillMenu4_1(self):
         self.hillMenuBox4.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 GS25!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu4_2(self):
         self.hillMenuBox4.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 아리가또맘마!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu4_3(self):
         self.hillMenuBox4.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 네네치킨!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillMenu4_4(self):
         self.hillMenuBox4.hide()
         self.chat.setText("점심 장소는 \"언덕에 있는 팔선생!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
 
     def selectHillDownMenu1(self):
         self.hillDownMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 아래에 있는 나성집!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillDownMenu2(self):
         self.hillDownMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 아래에 있는 송스키친!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillDownMenu3(self):
         self.hillDownMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 아래에 있는 원테이블!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
     def selectHillDownMenu4(self):
         self.hillDownMenuBox.hide()
         self.chat.setText("점심 장소는 \"언덕 아래에 있는 부암동으로 가자!\".")
+        self.nextButton2.show()
+        self.nextButton2.clicked.connect(self.lunchLocation)
 
 # 다음 UI화면으로 이동 -------------------------------------------------------------------
     def lunchLocation(self):

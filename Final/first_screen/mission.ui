@@ -320,10 +320,10 @@
     </property>
    </widget>
    <zorder>imageLabel</zorder>
+   <zorder>missionBox</zorder>
    <zorder>menu</zorder>
    <zorder>menuBox</zorder>
    <zorder>chat</zorder>
-   <zorder>missionBox</zorder>
    <zorder>mission_show</zorder>
    <zorder>next</zorder>
    <zorder>go</zorder>
