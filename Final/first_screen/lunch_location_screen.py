@@ -121,7 +121,7 @@ class lunch_location_screen(QDialog,QWidget, form_lunch_location_screen):
                 self.rightButton.hide()
                 self.pixmap = QImage("location9.jpg").scaled(801, 361)
                 self.imageLabel.setPixmap(QPixmap(self.pixmap))
-                self.chat.setText("목적지에 도착했다!")
+                self.chat.setText("목적지에 도착했다!\n맛있게 먹고오자!")
                 self.finishButton.clicked.connect(self.nextscreen)
             else:
                 self.chat.setText("이 방향으로 가면 도착지와 멀어질 것 같다...")

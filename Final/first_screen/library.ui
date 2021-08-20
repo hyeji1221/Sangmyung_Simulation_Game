@@ -39,6 +39,9 @@
     <property name="title">
      <string/>
     </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
     <widget class="QPushButton" name="map">
      <property name="geometry">
       <rect>
@@ -158,7 +161,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="lineWidth">
-     <number>3</number>
+     <number>2</number>
     </property>
     <property name="midLineWidth">
      <number>3</number>

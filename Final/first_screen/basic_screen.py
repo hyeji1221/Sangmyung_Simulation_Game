@@ -149,11 +149,13 @@ class basic_screen(QMainWindow, form_class):
 
     def condition(self):
         if (self.number == 20):
-            self.chat.setText("    도착!\n\n\n\n\n    종료하시겠습니까?")
+            self.chat.setText("    도착했다!\n    수업을 들으러 가볼까?")
+            self.upBtn.hide()
+            self.downBtn.hide()
             self.finishBtn.show()
             self.finishBtn.clicked.connect(self.finishBtnButton)
         elif (self.number == 1):
-            self.chat.setText("    시작!")
+            self.chat.setText("    강의실로 가자!")
             self.upShow()
 
         elif (self.number == 7):

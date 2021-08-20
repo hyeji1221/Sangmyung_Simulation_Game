@@ -128,7 +128,7 @@ class WindowClass(QMainWindow):
         self.imageLabel.show()
         self.pixmap = QImage("li_1.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
-        self.chat.setText("도서관을 찾으러 갑시다.")
+        self.chat.setText("미션을 완료하기 위해 도서관을 찾으러 가자.")
         self.next.hide()
         self.front.show()
         self.left.show()
@@ -333,7 +333,7 @@ class PrintClass(QMainWindow):
         self.right.clicked.connect(self.rightButton)
     def frontButton(self):
         self.go.show()
-        self.chat.setText("다왔다.")
+        self.chat.setText("거의 도착한 것 같다.")
         self.go.clicked.connect(self.GoButton)
     def leftButton(self):
         self.go.hide()

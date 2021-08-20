@@ -158,7 +158,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="lineWidth">
-     <number>3</number>
+     <number>2</number>
     </property>
     <property name="midLineWidth">
      <number>3</number>
@@ -263,7 +263,7 @@
      </property>
      <property name="text">
       <string>도서관 이외에도 미백관, 가정관에 프린터기가
-비취되어 있다. 급할때 사용하도록하자!</string>
+비치되어 있다. 급할때 사용하도록하자!</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

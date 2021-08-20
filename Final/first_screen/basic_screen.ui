@@ -277,9 +277,9 @@
    <widget class="QPushButton" name="finishBtn">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>510</y>
-      <width>93</width>
+      <x>682</x>
+      <y>530</y>
+      <width>81</width>
       <height>28</height>
      </rect>
     </property>

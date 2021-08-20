@@ -158,7 +158,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="lineWidth">
-     <number>3</number>
+     <number>2</number>
     </property>
     <property name="midLineWidth">
      <number>3</number>
