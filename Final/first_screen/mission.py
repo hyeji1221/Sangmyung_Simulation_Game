@@ -16,13 +16,13 @@ class WindowClass(QMainWindow):
         super().__init__()
         loadUi("mission.ui", self)
 
-        self.setWindowTitle('SSG')
-        self.setWindowIcon(QIcon('smu.jpg'))
-
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)
         self.setPalette(pal)
+
+        self.setWindowTitle('SSG')
+        self.setWindowIcon(QIcon('smu.jpg'))
 
         self.show()
         self.menuBox.hide()

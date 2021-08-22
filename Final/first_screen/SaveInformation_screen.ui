@@ -136,28 +136,28 @@
      <item row="4" column="1">
       <widget class="QLabel" name="Data1_grade">
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="Data1_name">
        <property name="text">
-        <string>A</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="Data1_ID">
        <property name="text">
-        <string>202100000</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="Data1_department">
        <property name="text">
-        <string>OO과</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -213,7 +213,7 @@
      <item row="1" column="1">
       <widget class="QLabel" name="Data2_name">
        <property name="text">
-        <string>B</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -256,7 +256,7 @@
      <item row="4" column="1">
       <widget class="QLabel" name="Data2_grade">
        <property name="text">
-        <string>2</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -275,14 +275,14 @@
      <item row="2" column="1">
       <widget class="QLabel" name="Data2_ID">
        <property name="text">
-        <string>202000000</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="Data2_department">
        <property name="text">
-        <string>OO과</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -386,28 +386,28 @@
      <item row="4" column="1">
       <widget class="QLabel" name="Data3_grade">
        <property name="text">
-        <string>3</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="Data3_name">
        <property name="text">
-        <string>C</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="Data3_ID">
        <property name="text">
-        <string>201900000</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="Data3_department">
        <property name="text">
-        <string>OO과</string>
+        <string/>
        </property>
       </widget>
      </item>
