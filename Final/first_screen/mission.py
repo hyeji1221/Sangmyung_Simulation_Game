@@ -21,9 +21,6 @@ class WindowClass(QMainWindow):
         self.setAutoFillBackground(True)
         self.setPalette(pal)
 
-        self.setWindowTitle('SSG')
-        self.setWindowIcon(QIcon('smu.jpg'))
-
         self.show()
         self.menuBox.hide()
         self.missionBox.hide()
@@ -167,9 +164,6 @@ class LibraryClass(QMainWindow):
         super().__init__()
         loadUi("library.ui", self)
 
-        self.setWindowTitle('SSG')
-        self.setWindowIcon(QIcon('smu.jpg'))
-
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
         self.setAutoFillBackground(True)
@@ -206,9 +200,6 @@ class StudentClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("student.ui",self)
-
-        self.setWindowTitle('SSG')
-        self.setWindowIcon(QIcon('smu.jpg'))
 
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
@@ -288,9 +279,6 @@ class PrintClass(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("print.ui",self)
-
-        self.setWindowTitle('SSG')
-        self.setWindowIcon(QIcon('smu.jpg'))
 
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(242, 245, 253))
@@ -384,13 +372,16 @@ class Mission(QDialog,QWidget):
         studentWindow = StudentClass()
         printWindow = PrintClass()
 
-
         widget.addWidget(myWindow)
         widget.addWidget(libraryWindow)
         widget.addWidget(studentWindow)
         widget.addWidget(printWindow)
         widget.setFixedHeight(600)
         widget.setFixedWidth(800)
+
+        widget.setWindowTitle('SSG')
+        widget.setWindowIcon(QIcon('smu.jpg'))
+
         widget.show()
 
     # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
