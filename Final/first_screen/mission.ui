@@ -297,10 +297,10 @@
    <widget class="QPushButton" name="mapclose">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>360</x>
       <y>340</y>
-      <width>75</width>
-      <height>23</height>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">

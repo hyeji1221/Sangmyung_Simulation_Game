@@ -63,6 +63,7 @@ class WindowClass(QMainWindow):
         self.front.setStyleSheet("background-color: #FAFCFF")
         self.left.setStyleSheet("background-color: #FAFCFF")
         self.right.setStyleSheet("background-color: #FAFCFF")
+        self.mapclose.setStyleSheet("background-color: #DFECFF")
 
     def slot_toggle(self):
         if self.menu.isChecked():
@@ -84,6 +85,7 @@ class WindowClass(QMainWindow):
         self.imageLabel.show()
         self.pixmap = QImage("map.jpg").scaled(801, 361)
         self.imageLabel.setPixmap(QPixmap(self.pixmap))
+        self.mapclose.setText("지도 닫기")
         self.mapclose.show()
         self.mapclose.clicked.connect(self.mapcloseButton)
 
@@ -108,6 +110,13 @@ class WindowClass(QMainWindow):
 
     def timeButton(self):
         print("time")
+        self.imageLabel.show()
+        self.mapclose.show()
+        self.pixmap = QImage("timetable.jpg").scaled(801, 361)
+        self.imageLabel.setPixmap(QPixmap(self.pixmap))
+        self.mapclose.setText("시간표 닫기")
+
+        self.mapclose.clicked.connect(self.mapcloseButton)
 
     def menuOff(self):
         self.map.disconnect()
