@@ -1,4 +1,4 @@
-# Sangmyung_Simulation_Same(SSG)
+# Sangmyung_Simulation_Game(SSG)
 
 ### 설명
 
